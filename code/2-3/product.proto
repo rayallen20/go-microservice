@@ -1,0 +1,25 @@
+// 语法版本
+syntax = "proto3";
+
+// 包名
+package go.micro.service.product;
+
+// service 定义用于被远程调用的服务
+service Product {
+  rpc AddProduct(ProductInfo) returns(ResponseProduct) {}
+}
+
+// message 用于定义属性
+message ProductInfo {
+  // 此处的 id = 1 并不是赋值 1是字段标识符
+  // 字段修饰符在proto3中可省略不写
+  int64 id = 1;
+
+  // 常用字段标识符为1-15 超过15之后 会开2个字节来存储属性
+  string product_name = 2;
+}
+
+message ResponseProduct {
+  // 字段标识符的作用域为message
+  int64 product_id = 1;
+}

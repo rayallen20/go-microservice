@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package go.micro.service.imooc;
+
+service Roach {
+  rpc SayHello(SayRequest) returns (SayResponse) {}
+}
+
+message SayRequest {
+  string message = 1;
+}
+
+message SayResponse {
+  string answer = 1;
+}
