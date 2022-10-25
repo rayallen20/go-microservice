@@ -114,5 +114,3 @@ make proto
 sudo docker run --rm -v /Users/yanglei/Desktop/user/user:/Users/yanglei/Desktop/user/user -w /Users/yanglei/Desktop/user/user -e ICODE=7DD47DEF3E0D096A cap1573/cap-protoc -I ./ --go_out=./ --micro_out=./ ./proto/user/user.proto
 恭喜，恭喜命令执行成功！% 
 ```
-
-## PART3. Docker命令使用
