@@ -104,11 +104,6 @@ docker run -d --name jaeger -p 6831:6831/udp -p 16686:16686 cap1573/jaeger
 ```
 
 ```
-docker run -d --name jaeger -p 6831:6831/udp -p 16686:16686 cap1573/jaeger
-75af8b81f9b145d73cd532f2eb4e21ae12a3b1021895375a3b04ad1083ac88f9
-```
-
-```
 docker ps
 CONTAINER ID   IMAGE            COMMAND                  CREATED         STATUS         PORTS                                                                                       NAMES
 75af8b81f9b1   cap1573/jaeger   "/go/bin/standalone-…"   2 minutes ago   Up 2 minutes   5775/udp, 5778/tcp, 6832/udp, 14268/tcp, 0.0.0.0:6831->6831/udp, 0.0.0.0:16686->16686/tcp   jaeger
