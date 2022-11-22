@@ -24,5 +24,4 @@ type Cart struct {
 	// UserID 用户id
 	UserID int64 `gorm:"not_null" json:"user_id"`
 }
-
 ```
