@@ -29,6 +29,7 @@ func GetConsulConfig(host string, port int64, prefix string) (config.Config, err
 		consul.StripPrefix(true),
 	)
 
+	// 初始化配置
 	conf, err := config.NewConfig()
 	if err != nil {
 		return nil, err
@@ -42,6 +43,8 @@ func GetConsulConfig(host string, port int64, prefix string) (config.Config, err
 	return conf, err
 }
 ```
+
+注:需要执行:`go get github.com/micro/go-plugins/config/source/consul/v2`,加载go-micro的插件模块
 
 ### 1.2 使用配置中心
 
@@ -146,4 +149,6 @@ func main() {
 
 - 注:此处配置中心和注册中心只是使用了同一个中间件(consul),但实际上它们的作用并不相同(从编码中也可以看出,类型其实也不同).但具体有啥区别,我现在也不知道
 - 注:此时代码时跑不起来的,因为变量`conf`和`consulRegistry`还未被使用
+- 注:需使用`go get github.com/micro/go-plugins/registry/consul/v2`,加载注册中心的consul插件.注意这个插件和1.1章节中的配置中心插件不同
+- 注:需使用`go get github.com/micro/go-micro/v2/registry`,加载注册中心插件
 

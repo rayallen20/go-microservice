@@ -546,6 +546,19 @@ func main() {
 
 执行`go get -u golang.org/x/sys`即可
 
+## PART7. 提交代码
+
+### 7.1 创建仓库
+
+注意:一定要每个微服务一个仓库,不然后续微服务之间互相无法调用.提交时,将category目录下的内容,全部提交即可
+
+```
+git init
+git add .
+git commit -m "category微服务开发完成"
+git push https://我的慕课git账户:我的慕课git密码@git.imooc.com/rayallen20c/category.git --all
+```
+
 ## PART7. 编译并执行
 
 ```
