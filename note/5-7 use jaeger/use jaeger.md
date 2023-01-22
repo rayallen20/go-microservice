@@ -218,11 +218,13 @@ func main() {
 	product.RegisterProductHandler(service.Server(), new(handler.Product))
 
 	// Run service
-	if err := service.Run(); err != nil {
+	if err = service.Run(); err != nil {
 		log.Fatal(err)
 	}
 }
 ```
+
+注:需实现执行`go get github.com/uber/jaeger-client-go`
 
 ## PART3. 使用配置中心中的配置项连接数据库并初始化表结构
 
@@ -514,6 +516,8 @@ func main() {
 
 TODO:此处的`micro.WrapClient`是干啥的? 和`micro.WrapHandler`有啥区别?
 
+注:需事先执行`go get github.com/micro/go-plugins/wrapper/trace/opentracing/v2`
+
 ## PART6. 完整的`main()`函数
 
 ```go
@@ -615,11 +619,22 @@ func main() {
 }
 ```
 
+推送代码:
+
+```
+git init
+git add .
+git commit -m "product微服务开发完成"
+git push https://我的慕课git账户:我的慕课git密码@git.imooc.com/rayallen20c/product.git --all
+```
+
 ## PART7. 运行product微服务时的consul
 
 ![category和product同时运行时的consul](./img/category和product同时运行时的consul.png)
 
 ## PART8. 编写测试代码
+
+注:正式使用时,需要先`go get git.imooc.com/rayallen20c/product`
 
 此时微服务product已经配置了链路追踪,还需要有一个同样配置了链路追踪的微服务作为它的客户端去请求它,才能在jaeger中看到链路追踪的span.
 
