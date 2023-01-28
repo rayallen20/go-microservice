@@ -3,7 +3,7 @@
 ## PART1. 创建工程目录
 
 ```
-docker run --rm -v $(pwd):$(pwd) -w $(pwd) -e ICODE=3DCF426135DEE96B cap1573/cap-micro new git.imooc.com/cap1573/cart
+docker run --rm -v $(pwd):$(pwd) -w $(pwd) -e ICODE=5A2A1531917A4D2B cap1573/cap-micro new git.imooc.com/cap1573/cart
 ```
 
 ```
@@ -128,7 +128,7 @@ message CartAll {
 ```
  pwd
 /cart
-docker run --rm -v $(pwd):$(pwd) -w $(pwd) -e ICODE=3DCF426135DEE96B cap1573/cap-protoc -I ./ --micro_out=./ --go_out=./ ./proto/cart/cart.proto
+docker run --rm -v $(pwd):$(pwd) -w $(pwd) -e ICODE=5A2A1531917A4D2B cap1573/cap-protoc -I ./ --micro_out=./ --go_out=./ ./proto/cart/cart.proto
 恭喜，恭喜命令执行成功！
 ```
 
