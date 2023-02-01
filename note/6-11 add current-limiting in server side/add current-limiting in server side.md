@@ -505,3 +505,12 @@ func main() {
 	}
 }
 ```
+
+## PART8. 推送代码
+
+```
+git init
+git add .
+git commit -m "cart微服务开发完成"
+git push https://慕课网账户:慕课网密码@git.imooc.com/rayallen20c/cart.git --all
+```
