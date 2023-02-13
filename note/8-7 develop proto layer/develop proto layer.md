@@ -51,7 +51,7 @@ service Payment {
 	// DeletePayment 删除支付单信息
 	rpc DeletePayment(PaymentID) returns (Response) {}
 	// FindPaymentByID 根据ID查找支付单信息
-	rpc FindPaymentByID(PaymentID) returns (Response) {}
+	rpc FindPaymentByID(PaymentID) returns (PaymentInfo) {}
 	// FindAllPayment 查找所有支付单信息
 	rpc FindAllPayment(All) returns (PaymentAll) {}
 }
